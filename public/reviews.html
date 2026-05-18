@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avis - FrejSmithWeb</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <img src="images/fsw.png" alt="FrejSmithWeb Logo">
+                    </div>
+                    <h1>FrejSmithWeb</h1>
+                </div>
+                <nav class="nav">
+                    <a href="index.html">Accueil</a>
+                    <a href="about.html">À propos</a>
+                    <a href="services.html">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="reviews.html">Avis</a>
+                    <a href="reservations.html">Réservations</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="contact-full">
+        <div class="container">
+            <h2>Laissez un avis</h2>
+            <p>Votre retour m'aide à améliorer mes services.</p>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="reviewForm">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="rating">Note</label>
+                            <select id="rating" name="rating" required>
+                                <option value="">Choisir...</option>
+                                <option value="5">5 - Excellent</option>
+                                <option value="4">4 - Très bien</option>
+                                <option value="3">3 - Bien</option>
+                                <option value="2">2 - Moyen</option>
+                                <option value="1">1 - Insuffisant</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="review">Avis</label>
+                            <textarea id="review" name="review" rows="5" required></textarea>
+                        </div>
+                        <div id="formMessage" class="form-message"></div>
+                        <button type="submit" class="btn btn-primary">Envoyer l'avis</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 FrejSmithWeb. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="review.js"></script>
+    <script src="tracker.js"></script>
+</body>
+</html>
