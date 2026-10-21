@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - FrejSmithWeb</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <img src="images/fsw.png" alt="FrejSmithWeb Logo">
+                    </div>
+                    <h1>FrejSmithWeb</h1>
+                </div>
+                                            <nav class="nav">
+                <a href="index.html">Accueil</a>
+                <a href="agences.html">Agences</a>
+                <div class="nav-dropdown">
+                    <a href="#offres">Domaines d'expertises</a>
+                    <div class="dropdown-menu">
+                        <a href="service.php?service=site-internet">Création de Site Internet</a>
+                        <a href="service.php?service=application-web">Application Web</a>
+                        <a href="service.php?service=seo">Référencement SEO</a>
+                        <a href="service.php?service=ux-ui">UX/UI Design</a>
+                        <a href="service.php?service=graphisme">Graphisme</a>
+                        <a href="service.php?service=maintenance">Maintenance et Support</a>
+                    </div>
+                </div>
+                    <a href="index.html#realisations" data-i18n="nav_refer">Références</a>
+                    <a href="blog.html" data-i18n="nav_blog">Blog</a>
+                    <a href="contact.html" data-i18n="nav_contact">Contactez-nous</a>
+                    <div class="lang-switcher">
+                        <select id="languageSelector" aria-label="Langue">
+                            <option value="fr">FR</option>
+                            <option value="en">EN</option>
+                            <option value="es">ES</option>
+                            <option value="de">DE</option>
+                        </select>
+                    </div>
+            </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Content -->
+    <section class="about-full">
+        <div class="container">
+            <h2>À propos de Nous</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/500x400?text=FrejSmithWeb" alt="FrejSmithWeb">
+                </div>
+                <div class="about-text">
+                    <p>Passionné par le développement web et mobile depuis plusieurs années, je crée des solutions innovantes et performantes pour mes clients. Avec une expertise en technologies modernes comme React, Next.js, Node.js et les applications mobiles, je transforme vos idées en réalité digitale.</p>
+                    <p>Mon approche est centrée sur l'utilisateur, en garantissant des interfaces intuitives, des performances optimales et une sécurité robuste.</p>
+                    <a href="contact.html" class="btn btn-primary">Me contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 FrejSmithWeb. Tous droits réservés.</p>
+        </div>
+    </footer>
+        <script src="lang.js"></script>
+        <script src="consent.js"></script>
+    <script src="carousel.js"></script>
+</body>
+</html>

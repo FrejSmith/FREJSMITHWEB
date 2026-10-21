@@ -1,3 +1,9 @@
+const resolveApiUrl = (path) => {
+    const base = (window.API_BASE_URL || '').replace(/\/$/, '');
+    const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+    return `${base}${normalizedPath}`;
+};
+
 const reviewForm = document.getElementById('reviewForm');
 if (reviewForm) {
     reviewForm.addEventListener('submit', function(e) {
@@ -10,7 +16,7 @@ if (reviewForm) {
         messageDiv.style.borderRadius = '6px';
         messageDiv.style.display = 'none';
 
-        fetch('api.php?action=submit-review', {
+        fetch(resolveApiUrl('api.php?action=submit-review'), {
             method: 'POST',
             body: formData
         })

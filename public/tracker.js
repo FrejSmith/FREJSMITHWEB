@@ -6,8 +6,14 @@
 (function() {
     'use strict';
 
+    const resolveApiUrl = (path) => {
+        const base = (window.API_BASE_URL || '').replace(/\/$/, '');
+        const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+        return `${base}${normalizedPath}`;
+    };
+
     const TRACKER_CONFIG = {
-        apiEndpoint: '/api.php',
+        apiEndpoint: resolveApiUrl('api.php'),
         trackingInterval: 30000, // 30 secondes
         reportInterval: 60000,   // 60 secondes
         maxLocalEvents: 50

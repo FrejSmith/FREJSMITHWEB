@@ -3,150 +3,450 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FrejSmithWeb - Développeur Web & Mobile</title>
+    <title>FrejSmithWeb - Agence Digitale</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Header -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body data-page-title-key="page_title_home">
     <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <div class="logo">
-                        <img src="images/fsw.png" alt="FrejSmithWeb Logo">
-                    </div>
-                    <h1>FrejSmithWeb</h1>
+        <div class="container header-content">
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="images/fsw.png" alt="FrejSmithWeb Logo">
                 </div>
-                <nav class="nav">
-                    <a href="index.html">Accueil</a>
-                    <a href="about.html">À propos</a>
-                    <a href="services.html">Services</a>
-                    <a href="portfolio.html">Portfolio</a>
-                    <a href="reviews.html">Avis</a>
-                    <a href="reservations.html">Réservations</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
+                <div>
+                    <h1>FrejSmithWeb</h1>
+                    <p class="subline">FrejSmithWeb - IA & Innovation New</p>
+                </div>
             </div>
+            <nav class="nav">
+                <a href="index.html" data-i18n="nav_home">Accueil</a>
+                <a href="agences.html" data-i18n="nav_agences">Agences</a>
+                <div class="nav-dropdown">
+                    <a href="#offres" data-i18n="nav_domaines">Domaines d'expertises</a>
+                    <div class="dropdown-menu">
+                        <a href="service.php?service=site-internet">Création de Site Internet</a>
+                        <a href="service.php?service=application-web">Application Web</a>
+                        <a href="service.php?service=seo">Référencement SEO</a>
+                        <a href="service.php?service=ux-ui">UX/UI Design</a>
+                        <a href="service.php?service=graphisme">Graphisme</a>
+                        <a href="service.php?service=maintenance">Maintenance et Support</a>
+                    </div>
+                </div>
+                <a href="index.html#realisations" data-i18n="nav_refer">Références</a>
+                <a href="blog.html" data-i18n="nav_blog">Blog</a>
+                <a href="contact.html" data-i18n="nav_contact">Contactez-nous</a>
+                <div class="lang-switcher">
+                    <select id="languageSelector" aria-label="Langue">
+                        <option value="fr">FR</option>
+                        <option value="en">EN</option>
+                        <option value="es">ES</option>
+                        <option value="de">DE</option>
+                    </select>
+                </div>
+            </nav>
+        </div>
         </div>
     </header>
 
-    <!-- Carousel -->
-    <section class="carousel-section">
-        <div class="container">
-            <div class="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-slide active">
-                        <img src="https://images.pexels.com/photos/30885764/pexels-photo-30885764.jpeg" alt="Slide 1">
-                        <div class="carousel-caption">
-                            <h2>Développement Web Moderne</h2>
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <span class="hero-badge" data-i18n="hero_badge">IA & Innovation New</span>
+                    <h2 data-i18n="hero_title">On développe votre croissance à 99%</h2>
+                    <p data-i18n="hero_subtitle">Faites l'expérience d'une agence digitale unique où créativité et technologie se rencontrent. Votre vision, transformée en réalité numérique.</p>
+                    <div class="hero-actions">
+                        <a href="#offres" class="btn btn-primary" data-i18n="hero_btn_offres">Découvrir nos offres</a>
+                        <a href="contact.html" class="btn btn-secondary" data-i18n="hero_btn_contact">Contactez-nous</a>
+                            <a href="reviews.html" class="btn btn-secondary" data-i18n="hero_btn_reviews">Laisser un avis</a>
+                            <a href="reservations.html" class="btn btn-secondary" data-i18n="hero_btn_reserve">Réserver maintenant</a>
+                        </div>
+                    <div class="tech-icon-ticker">
+                        <div class="ticker-track">
+                            <span class="tech-icon"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="tech-icon"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tech-icon"><i class="fab fa-github"></i> GitHub</span>
+                            <span class="tech-icon"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span class="tech-icon"><i class="fab fa-node-js"></i> Node.js</span>
+                            <span class="tech-icon"><i class="fab fa-php"></i> PHP</span>
+                            <span class="tech-icon"><i class="fas fa-database"></i> SQL</span>
+                            <span class="tech-icon"><i class="fab fa-react"></i> React</span>
+                            <span class="tech-icon"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="tech-icon"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tech-icon"><i class="fab fa-github"></i> GitHub</span>
                         </div>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="https://images.pexels.com/photos/13570173/pexels-photo-13570173.jpeg" alt="Slide 2">
-                        <div class="carousel-caption">
-                            <h2>Applications Mobiles Performantes</h2>
+                    <div class="hero-meta">
+                        <div>
+                            <strong>06 41 31 32 00</strong>
+                            <p>Contactez-nous</p>
+                        </div>
+                        <div>
+                            <strong>4.9/5</strong>
+                            <p>Basé sur +100 avis sur Google</p>
                         </div>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="https://images.pexels.com/photos/8134609/pexels-photo-8134609.jpeg" alt="Slide 3">
-                        <div class="carousel-caption">
-                            <h2>Solutions Digitales Innovantes</h2>
+                </div>
+                <div class="hero-card carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-slide active">
+                            <img src="https://images.pexels.com/photos/7988535/pexels-photo-7988535.jpeg" alt="Création Web">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.pexels.com/photos/33349204/pexels-photo-33349204.jpeg" alt="Développement Web">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://media.istockphoto.com/id/1917724769/fr/photo/ic%C3%B4ne-de-recherche-num%C3%A9rique-sur-larri%C3%A8re-plan-technologique-futur-%C3%A9volution-des-moteurs-de.jpg?b=1&s=612x612&w=0&k=20&c=Tily-Nm7ASVa0Zb84cUxkiuzh_nJu2xI2ihFuyTDUYw=" alt="SEO Référencement">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.pexels.com/photos/28550000/pexels-photo-28550000.jpeg" alt="UX UI Design">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="https://images.pexels.com/photos/4238485/pexels-photo-4238485.jpeg" alt="Graphisme">
+                        </div>
+                        <a class="carousel-prev" onclick="changeSlide(-1)">❮</a>
+                        <a class="carousel-next" onclick="changeSlide(1)">❯</a>
+                        <div class="carousel-dots">
+                            <span class="dot active" onclick="currentSlide(0)"></span>
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
-                <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
-
-                <div class="carousel-dots">
-                    <span class="dot active" onclick="currentSlide(0)"></span>
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
+        <!-- Section Carrousel de Services Animée -->
+        <section class="animated-services-section">
+            <div class="container">
+                <div class="services-carousel">
+                    <div class="carousel-content">
+                        <div class="service-item active">
+                            <div class="service-text">
+                                <h3 class="animate-text">Création de Site Internet</h3>
+                                <p>Designs modernes et performants pour votre présence en ligne</p>
+                            </div>
+                            <img src="https://images.pexels.com/photos/18096282/pexels-photo-18096282.jpeg" alt="Site Internet" class="service-image">
+                        </div>
+                        <div class="service-item">
+                            <div class="service-text">
+                                <h3 class="animate-text">Applications Web Puissantes</h3>
+                                <p>Solutions innovantes et scalables pour vos projets ambitieux</p>
+                            </div>
+                            <img src="https://images.pexels.com/photos/5082576/pexels-photo-5082576.jpeg" alt="Application Web" class="service-image">
+                        </div>
+                        <div class="service-item">
+                            <div class="service-text">
+                                <h3 class="animate-text">Référencement SEO Premium</h3>
+                                <p>Positionnez-vous en première page Google avec notre expertise</p>
+                            </div>
+                            <img src="https://media.istockphoto.com/id/1917724769/fr/photo/ic%C3%B4ne-de-recherche-num%C3%A9rique-sur-larri%C3%A8re-plan-technologique-futur-%C3%A9volution-des-moteurs-de.jpg?b=1&s=612x612&w=0&k=20&c=Tily-Nm7ASVa0Zb84cUxkiuzh_nJu2xI2ihFuyTDUYw=" alt="SEO" class="service-image">
+                        </div>
+                        <div class="service-item">
+                            <div class="service-text">
+                                <h3 class="animate-text">UX/UI Design Exceptionnel</h3>
+                                <p>Interfaces intuitives qui convertissent et enchantent les utilisateurs</p>
+                            </div>
+                            <img src="https://images.pexels.com/photos/28550000/pexels-photo-28550000.jpeg" alt="UX/UI Design" class="service-image">
+                        </div>
+                        <div class="service-item">
+                            <div class="service-text">
+                                <h3 class="animate-text">Graphisme Créatif</h3>
+                                <p>Identité visuelle unique qui marque les esprits</p>
+                            </div>
+                            <img src="https://images.pexels.com/photos/4238485/pexels-photo-4238485.jpeg" alt="Graphisme" class="service-image">
+                        </div>
+                    </div>
+                    <button class="carousel-btn prev-btn" onclick="prevService()"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn next-btn" onclick="nextService()"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h2>Développeur Web & Mobile</h2>
-            <p>Création de sites web et applications mobiles professionnels et dynamiques.</p>
-            <a href="contact.html" class="btn btn-primary">Me contacter</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about-preview">
-        <div class="container">
-            <h3>À propos de moi</h3>
-            <p>Passionné par le développement web et mobile, je crée des solutions innovantes et performantes pour mes clients. Avec une expertise en technologies modernes, je transforme vos idées en réalité digitale.</p>
-            <a href="about.html" class="btn btn-secondary">En savoir plus</a>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services-preview">
-        <div class="container">
-            <h3>Mes Services</h3>
-            <div class="services-grid">
-                <div class="service-card">
-                    <img src="https://via.placeholder.com/300x200?text=Web+Dev" alt="Développement Web">
-                    <h4>Développement Web</h4>
-                    <p>Sites web responsives et dynamiques avec les dernières technologies.</p>
-                    <a href="services.html">Voir détails</a>
+        <section class="quick-actions-section">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="eyebrow" data-i18n="quick_actions_label">Actions rapides</span>
+                    <h3 data-i18n="quick_actions_title">Avis, réservations et services immédiats</h3>
+                    <p data-i18n="quick_actions_text">Choisissez un service ou envoyez directement un avis et une réservation en quelques clics.</p>
                 </div>
-                <div class="service-card">
-                    <img src="https://via.placeholder.com/300x200?text=Mobile+App" alt="Applications Mobiles">
-                    <h4>Applications Mobiles</h4>
-                    <p>Apps natives et hybrides pour iOS et Android.</p>
-                    <a href="services.html">Voir détails</a>
-                </div>
-                <div class="service-card">
-                    <img src="https://via.placeholder.com/300x200?text=Consulting" alt="Consulting">
-                    <h4>Consulting</h4>
-                    <p>Conseils et optimisation de vos projets digitaux.</p>
-                    <a href="services.html">Voir détails</a>
+                <div class="quick-links-grid">
+                    <a href="reviews.html" class="quick-link-card">
+                        <h3 data-i18n="quick_reviews_title">Laisser un avis</h3>
+                        <p data-i18n="quick_reviews_text">Partagez votre expérience et laissez un témoignage visible sur le site.</p>
+                    </a>
+                    <a href="reservations.html" class="quick-link-card">
+                        <h3 data-i18n="quick_reservations_title">Effectuer une réservation</h3>
+                        <p data-i18n="quick_reservations_text">Réservez une session, une prise de contact ou un projet personnalisé.</p>
+                    </a>
+                    <a href="service.php?service=site-internet" class="quick-link-card">
+                        <h3 data-i18n="quick_service_title">Choisir un service</h3>
+                        <p data-i18n="quick_service_text">Découvrez nos expertises et sélectionnez le service adapté à votre projet.</p>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Portfolio Preview -->
-    <section class="portfolio-preview">
-        <div class="container">
-            <h3>Portfolio</h3>
-            <p>Quelques projets récents.</p>
-            <div class="portfolio-grid">
-                <div class="portfolio-card">
-                    <img src="https://via.placeholder.com/400x250?text=Projet+1" alt="Projet 1">
-                    <h4>Projet 1</h4>
-                    <p>Description du projet.</p>
-                    <a href="portfolio.html">Voir plus</a>
+        <section class="expertise-section" id="offres">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="eyebrow">Domaines d'expertises</span>
+                    <h3>Nos expertises clés pour votre succès numérique</h3>
+                    <p>Nous construisons des solutions web et digitales taillées pour générer de la croissance, des conversions et un impact durable.</p>
                 </div>
-                <div class="portfolio-card">
-                    <img src="https://via.placeholder.com/400x250?text=Projet+2" alt="Projet 2">
-                    <h4>Projet 2</h4>
-                    <p>Description du projet.</p>
-                    <a href="portfolio.html">Voir plus</a>
-                </div>
-                <div class="portfolio-card">
-                    <img src="https://via.placeholder.com/400x250?text=Projet+3" alt="Projet 3">
-                    <h4>Projet 3</h4>
-                    <p>Description du projet.</p>
-                    <a href="portfolio.html">Voir plus</a>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <img src="https://images.pexels.com/photos/18096282/pexels-photo-18096282.jpeg" alt="Site Internet">
+                        <h4>Création de Site Internet</h4>
+                        <p>Un site web sur mesure, unique et attractif. Transformez chaque clic en une étape vers le succès.</p>
+                        <a href="service.php?service=site-internet">En savoir plus →</a>
+                    </article>
+                    <article class="feature-card">
+                        <img src="https://images.pexels.com/photos/5082576/pexels-photo-5082576.jpeg" alt="Application Web">
+                        <h4>Application Web</h4>
+                        <p>Une application web alliant excellence et créativité. Transformez toutes vos idées en expériences exceptionnelles.</p>
+                        <a href="service.php?service=application-web">En savoir plus →</a>
+                    </article>
+                    <article class="feature-card">
+                        <img src="https://images.pexels.com/photos/6120183/pexels-photo-6120183.jpeg" alt="Référencement SEO">
+                        <h4>Référencement SEO</h4>
+                        <p>Un référencement naturel optimisé sur plusieurs mois pour atteindre les premières positions Google.</p>
+                        <a href="service.php?service=seo">En savoir plus →</a>
+                    </article>
+                    <article class="feature-card">
+                        <img src="https://images.pexels.com/photos/28550000/pexels-photo-28550000.jpeg" alt="UX/UI Design">
+                        <h4>UX/UI Design</h4>
+                        <p>Un design captivant, une interface intuitive et une expérience utilisateur qui séduit et convertit.</p>
+                        <a href="service.php?service=ux-ui">En savoir plus →</a>
+                    </article>
+                    <article class="feature-card">
+                        <img src="https://images.pexels.com/photos/4443137/pexels-photo-4443137.jpeg" alt="Graphisme">
+                        <h4>Graphisme</h4>
+                        <p>Un graphisme innovant et une identité qui capte l'attention et favorise l'engagement.</p>
+                        <a href="service.php?service=graphisme">En savoir plus →</a>
+                    </article>
+                    <article class="feature-card">
+                        <img src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg" alt="Maintenance">
+                        <h4>Maintenance et Support</h4>
+                        <p>Une assistance professionnelle et adaptée 7j/7 pour maintenir votre site web à tout moment.</p>
+                        <a href="service.php?service=maintenance">En savoir plus →</a>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <section class="process-section">
+            <div class="container">
+                <div class="section-intro center">
+                    <span class="eyebrow">Conception A à Z</span>
+                    <h3>Notre processus de création</h3>
+                    <p>Votre site web, en seulement quelques étapes.</p>
+                </div>
+                <div class="process-grid">
+                    <article class="process-step">
+                        <span>1</span>
+                        <h4>Contact et définition des besoins</h4>
+                        <p>On échange, on écoute et on construit un cahier des charges précis autour de vos objectifs.</p>
+                    </article>
+                    <article class="process-step">
+                        <span>2</span>
+                        <h4>Production et itérations</h4>
+                        <p>Design, développement et optimisation avec des retours réguliers jusqu'à une version parfaite.</p>
+                    </article>
+                    <article class="process-step">
+                        <span>3</span>
+                        <h4>Livraison conforme à vos attentes</h4>
+                        <p>Un lancement maîtrisé, une formation rapide et un suivi complet pour vous accompagner.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="agency-section" id="agences">
+            <div class="container agency-grid">
+                <div>
+                    <span class="eyebrow">Agence digitale créative</span>
+                    <h3>Nous avons réalisé des centaines de projets</h3>
+                    <p>Depuis 2025, FrejSmithWeb accompagne ses clients avec des solutions performantes, innovantes et sur mesure.</p>
+                    <div class="agency-logos">
+                        <span><i class="fab fa-wordpress"></i> WordPress</span>
+                        <span><i class="fab fa-php"></i> PHP</span>
+                        <span><i class="fab fa-js"></i> JavaScript</span>
+                        <span><i class="fab fa-docker"></i> Docker</span>
+                        <span><i class="fab fa-node-js"></i> Node.JS</span>
+                        <span><i class="fab fa-html5"></i> HTML</span>
+                        <span><i class="fab fa-python"></i> Python</span>
+                        <span><i class="fab fa-github"></i> GitHub</span>
+                    </div>
+                </div>
+                <div class="agency-card">
+                    <h4>FrejSmithWeb</h4>
+                    <p>Faites l'expérience d'un accompagnement premium avec une équipe qui place l'innovation et la croissance au cœur de chaque projet.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section" id="realisations">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="eyebrow">Avis clients</span>
+                    <h3>200+ clients font confiance à FrejSmithWeb</h3>
+                </div>
+                <div class="testimonials-grid">
+                    <article class="testimonial-card">
+                        <p>"Communication parfaite. Un grand merci pour la réalisation de notre site web. Une équipe toujours à l'écoute."</p>
+                        <strong>Jean-Baptiste Pavageau</strong>
+                        <span>CEO Fiduciaire Genevoise</span>
+                    </article>
+                    <article class="testimonial-card">
+                        <p>"Service exceptionnel, toujours qualitatif. Un partenaire de confiance pour notre stratégie SEO et notre refonte."</p>
+                        <strong>Sébastien Aymard</strong>
+                        <span>CEO A26K Suisse</span>
+                    </article>
+                    <article class="testimonial-card">
+                        <p>"Très satisfaits de notre collaboration. FrejSmithWeb a été déterminant pour la réalisation de notre site vitrine."</p>
+                        <strong>Laëtitia Marchand</strong>
+                        <span>Resp. Communication de Tianto</span>
+                    </article>
+                    <article class="testimonial-card">
+                        <p>"Un partenaire de confiance, rigoureux et professionnel. Notre site est entre de bonnes mains."</p>
+                        <strong>Karine Oloste</strong>
+                        <span>Dir. Marketing de Taber Place</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="offers-cta">
+            <div class="container cta-grid">
+                <div>
+                    <span class="eyebrow">Nos offres</span>
+                    <h3>Les cartes en main pour aller plus loin</h3>
+                    <p>Nous façonnons des sites esthétiques, des applications web innovantes et un référencement SEO performant pour booster votre visibilité.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn btn-primary">Découvrir toutes nos offres</a>
+                    <a href="contact.html" class="btn btn-secondary">Demander un devis</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-section">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="eyebrow">Expertise & Insights</span>
+                    <h3>Nos dernières ressources</h3>
+                    <p>Actualités web, IA, SEO et transformation digitale pour rester en avance.</p>
+                </div>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <span class="blog-category">Solutions IA</span>
+                        <h4>Solutions IA pour plateformes digitales performantes</h4>
+                        <p>Intégrez chatbots, assistants IA et automatisations sur mesure.</p>
+                        <a href="blog.html">Découvrir nos solutions IA →</a>
+                    </article>
+                    <article class="blog-card">
+                        <span class="blog-category">Guide SEO</span>
+                        <h4>Crawl Budget : Google n'indexe plus vos nouvelles pages ?</h4>
+                        <p>Diagnostic Search Console, logs serveur et commandes bash prêtes à l'emploi.</p>
+                        <a href="blog.html">Lire le guide complet →</a>
+                    </article>
+                    <article class="blog-card">
+                        <span class="blog-category">Blog</span>
+                        <h4>Guides SEO, développement web et tendances digitales</h4>
+                        <p>Conseils pratiques pour réussir votre présence en ligne aujourd'hui.</p>
+                        <a href="blog.html">Explorer le blog →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 FrejSmithWeb. Tous droits réservés.</p>
+        <div class="container footer-grid">
+            <div>
+                <h4>FrejSmithWeb</h4>
+                <p>Agence digitale Toulouse depuis 2025.</p>
+            </div>
+            <div>
+                <h5>Menu</h5>
+                <a href="index.html">Agences</a>
+                <a href="index.html#offres">Nos offres</a>
+                <a href="index.html#realisations">Références</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contactez-nous</a>
+            </div>
+            <div>
+                <h5>Support</h5>
+                <a href="contact.html">Contactez-nous</a>
+                <a href="blog.html">Blog</a>
+                <a href="#">Sitemap</a>
+            </div>
+            <div>
+                <h5>Contact</h5>
+                <p><strong>06 41 31 32 00</strong></p>
+                <a href="contact.html">Nous écrire</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>FrejSmithWeb 2025 - 2026. Tous droits réservés.</p>
+            <div class="footer-links">
+                <a href="#">Mentions légales</a>
+                <a href="#">CGV</a>
+                <a href="#">CGU</a>
+            </div>
         </div>
     </footer>
 
+    <script src="lang.js"></script>
+    <script src="consent.js"></script>
     <script src="carousel.js"></script>
+    
+    <script>
+        // Animated Services Carousel
+        let currentServiceIndex = 0;
+        const serviceItems = document.querySelectorAll('.service-item');
+        const totalServices = serviceItems.length;
+        let autoplayTimeout;
+
+        function showService(index) {
+            // Remove active from all items
+            serviceItems.forEach(item => item.classList.remove('active'));
+            
+            // Add active to current item
+            if (serviceItems[index]) {
+                serviceItems[index].classList.add('active');
+            }
+        }
+
+        function nextService() {
+            clearTimeout(autoplayTimeout);
+            currentServiceIndex = (currentServiceIndex + 1) % totalServices;
+            showService(currentServiceIndex);
+            autoplayServices();
+        }
+
+        function prevService() {
+            clearTimeout(autoplayTimeout);
+            currentServiceIndex = (currentServiceIndex - 1 + totalServices) % totalServices;
+            showService(currentServiceIndex);
+            autoplayServices();
+        }
+
+        function autoplayServices() {
+            autoplayTimeout = setTimeout(() => {
+                nextService();
+            }, 5000); // Change slide every 5 seconds
+        }
+
+        // Initialize carousel
+        document.addEventListener('DOMContentLoaded', function() {
+            showService(0);
+            autoplayServices();
+        });
+    </script>
 </body>
 </html>

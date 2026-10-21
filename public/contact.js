@@ -1,3 +1,9 @@
+const resolveApiUrl = (path) => {
+    const base = (window.API_BASE_URL || '').replace(/\/$/, '');
+    const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+    return `${base}${normalizedPath}`;
+};
+
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -10,7 +16,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     messageDiv.style.borderRadius = '6px';
     messageDiv.style.display = 'none';
     
-    fetch('api.php?action=submit-contact', {
+    fetch(resolveApiUrl('api.php?action=submit-contact'), {
         method: 'POST',
         body: formData
     })

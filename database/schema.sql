@@ -79,6 +79,18 @@ CREATE TABLE IF NOT EXISTS js_errors (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Table pour les logs de consentement des utilisateurs
+CREATE TABLE IF NOT EXISTS consent_logs (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    site_name VARCHAR(255) NOT NULL,
+    choice ENUM('accept', 'refuse', 'preferences') NOT NULL,
+    page_url VARCHAR(500),
+    details TEXT,
+    ip_address VARCHAR(45),
+    user_agent TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Table pour les tentatives de connexion admin
 CREATE TABLE IF NOT EXISTS admin_attempts (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -103,3 +115,6 @@ CREATE INDEX idx_security_logs_severity ON security_logs(severity);
 CREATE INDEX idx_js_errors_created_at ON js_errors(created_at);
 CREATE INDEX idx_admin_attempts_ip ON admin_attempts(ip_address);
 CREATE INDEX idx_admin_attempts_created_at ON admin_attempts(created_at);
+CREATE INDEX idx_consent_logs_created_at ON consent_logs(created_at);
+CREATE INDEX idx_consent_logs_choice ON consent_logs(choice);
+CREATE INDEX idx_consent_logs_ip ON consent_logs(ip_address);

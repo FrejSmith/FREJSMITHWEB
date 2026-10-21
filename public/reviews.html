@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avis - FrejSmithWeb</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body data-page-title-key="page_title_reviews">
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -17,13 +18,30 @@
                     <h1>FrejSmithWeb</h1>
                 </div>
                 <nav class="nav">
-                    <a href="index.html">Accueil</a>
-                    <a href="about.html">À propos</a>
-                    <a href="services.html">Services</a>
-                    <a href="portfolio.html">Portfolio</a>
-                    <a href="reviews.html">Avis</a>
-                    <a href="reservations.html">Réservations</a>
-                    <a href="contact.html">Contact</a>
+                    <a href="index.html" data-i18n="nav_home">Accueil</a>
+                    <a href="agences.html" data-i18n="nav_agences">Agences</a>
+                    <div class="nav-dropdown">
+                        <a href="#offres" data-i18n="nav_domaines">Domaines d'expertises</a>
+                        <div class="dropdown-menu">
+                            <a href="service.php?service=site-internet">Création de Site Internet</a>
+                            <a href="service.php?service=application-web">Application Web</a>
+                            <a href="service.php?service=seo">Référencement SEO</a>
+                            <a href="service.php?service=ux-ui">UX/UI Design</a>
+                            <a href="service.php?service=graphisme">Graphisme</a>
+                            <a href="service.php?service=maintenance">Maintenance et Support</a>
+                        </div>
+                    </div>
+                    <a href="index.html#realisations" data-i18n="nav_refer">Références</a>
+                    <a href="blog.html" data-i18n="nav_blog">Blog</a>
+                    <a href="contact.html" data-i18n="nav_contact">Contactez-nous</a>
+                    <div class="lang-switcher">
+                        <select id="languageSelector" aria-label="Langue">
+                            <option value="fr">FR</option>
+                            <option value="en">EN</option>
+                            <option value="es">ES</option>
+                            <option value="de">DE</option>
+                        </select>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -31,21 +49,21 @@
 
     <section class="contact-full">
         <div class="container">
-            <h2>Laissez un avis</h2>
-            <p>Votre retour m'aide à améliorer mes services.</p>
+                    <h2 data-i18n="review_title">Laissez un avis</h2>
+                    <p data-i18n="review_subtitle">Votre retour m'aide à améliorer mes services.</p>
             <div class="contact-content">
                 <div class="contact-form">
                     <form id="reviewForm">
                         <div class="form-group">
-                            <label for="name">Nom</label>
+                            <label for="name" data-i18n="label_name">Nom</label>
                             <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="email" data-i18n="label_email">Email</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="rating">Note</label>
+                            <label for="rating" data-i18n="label_subject">Note</label>
                             <select id="rating" name="rating" required>
                                 <option value="">Choisir...</option>
                                 <option value="5">5 - Excellent</option>
@@ -56,11 +74,11 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="review">Avis</label>
+                            <label for="review" data-i18n="label_message">Avis</label>
                             <textarea id="review" name="review" rows="5" required></textarea>
                         </div>
                         <div id="formMessage" class="form-message"></div>
-                        <button type="submit" class="btn btn-primary">Envoyer l'avis</button>
+                        <button type="submit" class="btn btn-primary" data-i18n="btn_send_review">Envoyer l'avis</button>
                     </form>
                 </div>
             </div>
@@ -73,6 +91,8 @@
         </div>
     </footer>
 
+    <script src="lang.js"></script>
+    <script src="consent.js"></script>
     <script src="review.js"></script>
     <script src="tracker.js"></script>
 </body>

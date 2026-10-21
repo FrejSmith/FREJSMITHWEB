@@ -26,10 +26,12 @@ function showSlide(n) {
     dots[currentSlideIndex].classList.add('active');
 }
 
-// Auto-play carousel
+// Auto-play carousel every 5 seconds
 setInterval(() => {
     changeSlide(1);
 }, 5000);
 
-// Initialize
-showSlide(currentSlideIndex);
+// Initialize carousel
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentSlideIndex);
+});

@@ -143,6 +143,30 @@ class SiteController
         return ['success' => true, 'message' => 'Visiteur suivi', 'threat_score' => $threatScore];
     }
 
+    public function logConsentEvent(array $post, array $server): array
+    {
+        $choice = $this->sanitize($post['choice'] ?? '');
+        $pageUrl = $this->sanitize($post['page_url'] ?? '');
+        $siteName = $this->sanitize($post['site_name'] ?? 'Site Web Montpellier');
+        $details = $this->sanitize($post['details'] ?? '');
+
+        if (empty($choice)) {
+            return ['success' => false, 'message' => 'Choix de consentement manquant.'];
+        }
+
+        $this->db->insert('consent_logs', [
+            'site_name' => $siteName,
+            'choice' => $choice,
+            'page_url' => $pageUrl,
+            'details' => $details,
+            'ip_address' => $this->sanitize($server['REMOTE_ADDR'] ?? ''),
+            'user_agent' => $this->sanitize($server['HTTP_USER_AGENT'] ?? ''),
+            'created_at' => date('Y-m-d H:i:s')
+        ]);
+
+        return ['success' => true, 'message' => 'Consentement enregistré.', 'choice' => $choice];
+    }
+
     public function logSecurityEvent(array $post, array $server): array
     {
         $securityLog = $post['security_log'] ?? null;

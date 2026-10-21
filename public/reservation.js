@@ -1,3 +1,9 @@
+const resolveApiUrl = (path) => {
+    const base = (window.API_BASE_URL || '').replace(/\/$/, '');
+    const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+    return `${base}${normalizedPath}`;
+};
+
 const reservationForm = document.getElementById('reservationForm');
 if (reservationForm) {
     reservationForm.addEventListener('submit', function(e) {
@@ -10,7 +16,7 @@ if (reservationForm) {
         messageDiv.style.borderRadius = '6px';
         messageDiv.style.display = 'none';
 
-        fetch('api.php?action=submit-reservation', {
+        fetch(resolveApiUrl('api.php?action=submit-reservation'), {
             method: 'POST',
             body: formData
         })
