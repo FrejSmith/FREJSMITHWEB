@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="consent-content">
             <div class="consent-brand">
                 <span class="brand-dot"></span>
-                <span>Site Web Montpellier</span>
+                <span>Site Web Paris</span>
             </div>
             <p>Nous utilisons des cookies essentiels pour offrir une expérience fluide. Choisissez votre préférence ou consultez les options avant de continuer.</p>
             <div class="consent-actions">
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             body: JSON.stringify({
                 choice,
                 page_url: window.location.href,
-                site_name: 'Site Web Montpellier',
+                site_name: 'Site Web Paris',
                 details
             }),
             credentials: 'include'
